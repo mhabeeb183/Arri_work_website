@@ -160,20 +160,20 @@ export default function Contact() {
       </section>
 
       {/* Features Bottom Row */}
-      <section className="container mx-auto px-6 lg:px-12 pb-24">
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+      <section className="container mx-auto px-5 pb-16 sm:px-6 sm:pb-20 lg:px-12">
+         <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: '🤍', title: 'Quality Craftsmanship', desc: 'Every stitch is made with care and precision.' },
               { icon: '💎', title: 'Custom Designs', desc: 'Your ideas, our creativity — made just for you.' },
               { icon: '🛡️', title: 'Trusted Service', desc: 'Your satisfaction is our priority.' },
               { icon: '🌿', title: 'Timely Support', desc: 'We\'re always here to assist you.' }
             ].map((feature, i) => (
-              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{once:true}} variants={fadeUp} className="flex flex-col items-center">
-                 <div className="w-14 h-14 rounded-full bg-[#f4efe6] border border-brand-gold/30 flex items-center justify-center text-xl text-[#09201d] mb-4">
+              <motion.div key={i} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: i * 0.07, ease: 'easeOut' }} whileHover={{ y: -5 }} className="group flex h-full min-h-[230px] flex-col items-center rounded-2xl border border-[#c39b62]/35 bg-[#fbf8f1] px-5 py-7 shadow-[0_5px_18px_rgba(9,32,29,0.05)] transition-all duration-300 hover:border-[#c39b62]/65 hover:shadow-[0_12px_26px_rgba(9,32,29,0.10)] sm:min-h-[220px] sm:px-6 sm:py-8">
+                 <div className="mb-5 flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full border border-[#c39b62]/45 bg-[#f3eee3] text-[27px] shadow-[inset_0_0_0_4px_rgba(195,155,98,0.08)] transition-transform duration-300 group-hover:scale-105">
                    {feature.icon}
                  </div>
-                 <h3 className="font-serif text-[#09201d] text-sm font-bold mb-2">{feature.title}</h3>
-                 <p className="text-gray-500 text-xs font-light">{feature.desc}</p>
+                 <h3 className="mb-2 font-serif text-lg leading-snug text-[#09201d] sm:text-xl">{feature.title}</h3>
+                 <p className="max-w-[16rem] text-sm font-light leading-relaxed text-[#686e68]">{feature.desc}</p>
               </motion.div>
             ))}
          </div>

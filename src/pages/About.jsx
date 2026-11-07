@@ -22,7 +22,7 @@ export default function About() {
       <SEO title="About Us" description="Learn about Arfi Needle Art's tradition, craftsmanship, and passion for Aari blouse work." />
       
       {/* Hero Section - Identical Full-Width Background Composition as Home */}
-      <section className="relative bg-[#0b1b17] min-h-[100svh] lg:min-h-[90vh] flex flex-col lg:flex-row lg:items-center pt-24 lg:pt-20 pb-0 overflow-hidden">
+      <section className="relative bg-[#0b1b17] min-h-[78svh] lg:min-h-[90vh] flex flex-col lg:flex-row lg:items-center pt-24 lg:pt-20 pb-0 overflow-hidden">
         
         {/* Universal Responsive Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
@@ -198,7 +198,7 @@ export default function About() {
            </motion.div>
 
            <motion.div 
-             className="lg:w-1/3 relative"
+             className="lg:w-1/3 relative mb-16 lg:mb-0"
              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
            >
               <img 
@@ -206,7 +206,7 @@ export default function About() {
                 alt="Green Aari blouse with embroidered back design" 
                 className="w-full aspect-[3/4] object-cover shadow-lg rounded-sm"
               />
-              <div className="absolute -bottom-8 -right-4 font-serif text-2xl text-[#a27a44] italic rotate-[-10deg]">
+              <div className="absolute -bottom-14 inset-x-0 text-center font-serif text-xl sm:text-2xl leading-snug text-[#a27a44] italic">
                 Traditional Art<br/>Modern Elegance ♡
               </div>
            </motion.div>
@@ -214,8 +214,8 @@ export default function About() {
       </section>
 
       {/* 4 Feature Columns */}
-      <section className="py-16 container mx-auto px-6 lg:px-12 border-t border-gray-200">
-         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <section className="pt-6 pb-14 md:py-16 container mx-auto px-6 lg:px-12 border-t border-[#c39b62]/20">
+         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 text-center">
             {[
               { icon: '🖊️', title: 'Authentic Aari Work', desc: 'Traditional techniques passed down through generations.' },
               { icon: '💎', title: 'Premium Quality', desc: 'We use the finest materials to ensure lasting beauty and comfort.' },
@@ -224,15 +224,14 @@ export default function About() {
             ].map((feature, i) => (
               <motion.div 
                 key={i} 
-                className="flex flex-col items-center"
-                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="group relative flex h-full flex-col items-center rounded-2xl border border-[#c39b62]/35 bg-[#fbf8f1] px-5 py-7 shadow-[0_5px_18px_rgba(9,32,29,0.05)] transition-all duration-300 hover:border-[#c39b62]/65 hover:shadow-[0_12px_26px_rgba(9,32,29,0.10)] sm:px-6 sm:py-8"
+                initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.55, delay: i * 0.08, ease: 'easeOut' }} whileHover={{ y: -5 }}
               >
-                 <div className="w-16 h-16 rounded-full bg-[#f4efe6] border border-brand-gold/30 flex items-center justify-center text-2xl text-[#09201d] shadow-sm mb-4">
+                 <div className="mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-full border border-[#c39b62]/45 bg-[#f3eee3] text-[27px] shadow-[inset_0_0_0_4px_rgba(195,155,98,0.08)] transition-transform duration-300 group-hover:scale-105">
                    {feature.icon}
                  </div>
-                 <h3 className="font-serif text-[#09201d] text-lg mb-2">{feature.title}</h3>
-                 <p className="text-gray-500 text-sm font-light px-4">{feature.desc}</p>
-                 {i !== 3 && <div className="hidden md:block absolute right-0 top-1/2 w-px h-16 bg-gray-200 -mt-8"></div>}
+                 <h3 className="mb-2 font-serif text-[#09201d] text-lg sm:text-xl leading-snug">{feature.title}</h3>
+                 <p className="max-w-[16rem] text-[#686e68] text-sm font-light leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
          </div>
