@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@theme {
+  --color-brand-dark: #09201d; /* Dark Teal/Green */
+  --color-brand-gold: #c39b62; /* Soft Gold */
+  --color-brand-gold-light: #d6b482;
+  --color-brand-cream: #f4efe6; /* Warm Cream background */
+  --color-brand-white: #ffffff;
+  --color-brand-text: #2c332f; /* Dark text for light sections */
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-text font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-cream); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-gold); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-dark); 
+}
