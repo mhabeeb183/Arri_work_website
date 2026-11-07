@@ -24,7 +24,7 @@ export default function Home() {
       />
       
       {/* Hero Section */}
-      <section className="relative bg-[#0b1b17] min-h-[100svh] lg:min-h-[90vh] flex flex-col lg:flex-row lg:items-center pt-24 lg:pt-20 pb-0 overflow-hidden">
+      <section className="home-hero relative bg-[#0b1b17] min-h-[100svh] lg:min-h-[90vh] flex flex-col lg:flex-row lg:items-center pt-24 lg:pt-20 pb-0 overflow-hidden">
         
         {/* Universal Responsive Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
@@ -32,13 +32,13 @@ export default function Home() {
            <img 
              src={heroImage} 
              alt="Aari Blouse Desktop" 
-             className="hidden lg:block w-full h-full object-cover object-center"
+              className="hidden lg:block w-full h-full object-cover object-center"
            />
            {/* Mobile Image */}
            <img 
              src={heroImageMobile} 
              alt="Aari Blouse Mobile" 
-             className="block lg:hidden w-full h-full object-cover object-center"
+             className="block lg:hidden w-full h-full object-cover object-center home-hero-mobile-image"
            />
            {/* Gradients */}
            {/* Desktop Gradient: protects left text */}
