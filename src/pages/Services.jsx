@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { PiMedalLight, PiNeedleLight, PiTruckLight, PiScissorsLight } from 'react-icons/pi';
 import SEO from '../components/SEO';
 import servicesBlouseImage from '../assets/images/gallery/services-aari-blouse.jpg';
 import servicesSareeImage from '../assets/images/gallery/services-saree-work.jpg';
@@ -85,10 +86,10 @@ export default function Services() {
             
             <motion.div initial="hidden" whileInView="visible" viewport={{once:true}} variants={stagger} className="w-full lg:w-1/2 grid grid-cols-4 gap-2 sm:gap-4 lg:gap-3 items-start">
                {[
-                 { icon: '💎', title: 'Premium\nQuality Work' },
-                 { icon: '✂️', title: 'Skilled\nArtisans' },
-                 { icon: '🛡️', title: 'On-Time\nDelivery' },
-                 { icon: '🤍', title: 'Custom\nDesigns' }
+                 { icon: <PiMedalLight className="h-7 w-7 text-[#a27a44]" aria-hidden="true" />, title: 'Premium\nQuality Work' },
+                 { icon: <PiNeedleLight className="h-7 w-7 text-[#a27a44]" aria-hidden="true" />, title: 'Skilled\nArtisans' },
+                 { icon: <PiTruckLight className="h-7 w-7 text-[#a27a44]" aria-hidden="true" />, title: 'On-Time\nDelivery' },
+                 { icon: <PiScissorsLight className="h-7 w-7 text-[#a27a44]" aria-hidden="true" />, title: 'Custom\nDesigns' }
                ].map((item, i) => (
                  <motion.div key={i} variants={fadeUp} className="text-center min-w-0">
                    <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2 sm:mb-3 text-2xl text-[#09201d] border border-gray-300 rounded-xl flex items-center justify-center bg-white shadow-sm">
@@ -167,7 +168,7 @@ export default function Services() {
 
       {/* CTA Footer Banner */}
       <section className="bg-[#09201d] py-16 text-center relative">
-         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/floral-motif.png')]"></div>
+         <div className="absolute inset-0 opacity-10 bg-[url('/floral-motif.svg')]"></div>
          <div className="relative z-10 container mx-auto px-6">
            <h2 className="text-3xl font-serif text-white mb-4">Ready to Create Something Beautiful?</h2>
            <p className="text-gray-400 font-light text-sm mb-8">Book your aari work service today and turn your style into a masterpiece.</p>

@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 import heroImage from '../assets/images/hero/hero-blouse.jpg';
 import heroImageMobile from '../assets/images/hero/hero-blouse-mobile.jpg';
 import greenBlouseImg from '../assets/images/about/green-blouse.jpg';
-import { PiNeedleLight, PiDiamondLight, PiHeartLight, PiFlowerLight } from 'react-icons/pi';
+import { PiNeedleLight, PiDiamondLight, PiHeartLight, PiFlowerLight, PiMedalLight, PiScissorsLight, PiHandHeartLight } from 'react-icons/pi';
 
 export default function About() {
   const fadeUp = {
@@ -217,10 +217,10 @@ export default function About() {
       <section className="pt-6 pb-14 md:py-16 container mx-auto px-6 lg:px-12 border-t border-[#c39b62]/20">
          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 text-center">
             {[
-              { icon: '🖊️', title: 'Authentic Aari Work', desc: 'Traditional techniques passed down through generations.' },
-              { icon: '💎', title: 'Premium Quality', desc: 'We use the finest materials to ensure lasting beauty and comfort.' },
-              { icon: '👗', title: 'Custom Designs', desc: 'Tailored to your style, size and preferences.' },
-              { icon: '🤍', title: 'Customer First', desc: 'Your satisfaction and trust mean everything to us.' }
+              { icon: <PiNeedleLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Authentic Aari Work', desc: 'Traditional techniques passed down through generations.' },
+              { icon: <PiMedalLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Premium Quality', desc: 'We use the finest materials to ensure lasting beauty and comfort.' },
+              { icon: <PiScissorsLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Custom Designs', desc: 'Tailored to your style, size and preferences.' },
+              { icon: <PiHandHeartLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Customer First', desc: 'Your satisfaction and trust mean everything to us.' }
             ].map((feature, i) => (
               <motion.div 
                 key={i} 

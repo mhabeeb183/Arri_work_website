@@ -288,7 +288,7 @@ export default function Home() {
       
       {/* Footer Banner placeholder (matches mockup bottom) */}
       <div className="bg-brand-dark py-12 relative overflow-hidden flex flex-col items-center justify-center border-t border-[#c39b62]/20">
-         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/floral-motif.png')]"></div>
+         <div className="absolute inset-0 opacity-10 bg-[url('/floral-motif.svg')]"></div>
          
          <div className="relative z-10 flex flex-col items-center space-y-2">
             <div className="font-serif text-[#d6b482] text-2xl italic">Arfi Needle Art</div>

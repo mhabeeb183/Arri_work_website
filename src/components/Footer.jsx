@@ -10,7 +10,7 @@ export default function Footer() {
         </filter>
       </svg>
       {/* Subtle floral background placeholder */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/floral-motif.png')]"></div>
+      <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('/floral-motif.svg')]"></div>
       
       <div className="container mx-auto px-6 lg:px-12 flex flex-col items-center">
         

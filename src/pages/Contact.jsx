@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaRegClock, FaMapMarkerAlt } from 'react-icons/fa';
+import { PiNeedleLight, PiScissorsLight, PiSealCheckLight, PiHeadsetLight } from 'react-icons/pi';
 import SEO from '../components/SEO';
 
 export default function Contact() {
@@ -115,21 +116,21 @@ export default function Contact() {
 
                <form className="space-y-5">
                  <div>
-                   <label className="block text-sm font-bold text-[#f0d5a5] mb-2">Full Name *</label>
-                   <input required type="text" placeholder="Enter your name" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5" />
+                   <label htmlFor="contact-full-name" className="block text-sm font-bold text-[#f0d5a5] mb-2">Full Name *</label>
+                   <input id="contact-full-name" name="fullName" autoComplete="name" required type="text" placeholder="Enter your name" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5" />
                  </div>
                  <div>
-                   <label className="block text-sm font-bold text-[#f0d5a5] mb-2">Email Address *</label>
-                   <input required type="email" placeholder="Enter your email" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5" />
+                   <label htmlFor="contact-email" className="block text-sm font-bold text-[#f0d5a5] mb-2">Email Address *</label>
+                   <input id="contact-email" name="email" autoComplete="email" required type="email" placeholder="Enter your email" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5" />
                  </div>
                  <div>
-                   <label className="block text-sm font-bold text-[#f0d5a5] mb-2">Phone Number</label>
-                   <input type="tel" placeholder="Enter your phone number" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5" />
+                   <label htmlFor="contact-phone" className="block text-sm font-bold text-[#f0d5a5] mb-2">Phone Number</label>
+                   <input id="contact-phone" name="phone" autoComplete="tel" type="tel" placeholder="Enter your phone number" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5" />
                  </div>
-                 <div><label className="block text-sm font-bold text-[#f0d5a5] mb-2">Service Required</label><select className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-[#e0bd83] bg-[#12332d]"><option value="">Choose a service</option>{['Aari Blouse Work','Saree Work','Lehenga Work','Dupatta Work','Salwar Suit Work','Custom Designs','Bridal Work','Patch & Motif Work'].map(x=><option key={x}>{x}</option>)}</select></div>
+                 <div><label htmlFor="contact-service" className="block text-sm font-bold text-[#f0d5a5] mb-2">Service Required</label><select id="contact-service" name="service" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-[#e0bd83] bg-[#12332d]"><option value="">Choose a service</option>{['Aari Blouse Work','Saree Work','Lehenga Work','Dupatta Work','Salwar Suit Work','Custom Designs','Bridal Work','Patch & Motif Work'].map(x=><option key={x}>{x}</option>)}</select></div>
                  <div>
-                   <label className="block text-sm font-bold text-[#f0d5a5] mb-2">Message *</label>
-                   <textarea required rows="4" placeholder="How can we help you?" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5"></textarea>
+                   <label htmlFor="contact-message" className="block text-sm font-bold text-[#f0d5a5] mb-2">Message *</label>
+                   <textarea id="contact-message" name="message" required rows="4" placeholder="How can we help you?" className="w-full border border-[#c39b62]/50 rounded-lg p-3 text-sm text-white placeholder:text-gray-400 focus:outline-none focus:border-[#e0bd83] bg-white/5"></textarea>
                  </div>
                  <button type="submit" className="w-full bg-[#c39b62] text-[#09201d] rounded-lg py-4 font-bold tracking-wide flex justify-center items-center hover:bg-[#e0bd83] transition-colors">
                    <span className="mr-2 text-lg">✈</span> Send Message
@@ -144,7 +145,7 @@ export default function Contact() {
       <section className="container mx-auto px-6 lg:px-12 mb-16">
          <div className="w-full min-h-[24rem] lg:h-[26rem] rounded-xl overflow-hidden relative shadow-lg border border-brand-gold/20 flex flex-col md:flex-row bg-white">
             <div className="w-full md:w-1/3 bg-[#09201d] p-6 md:p-8 lg:p-10 flex flex-col justify-center relative z-10 text-white">
-              <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/floral-motif.png')]"></div>
+              <div className="absolute inset-0 opacity-10 bg-[url('/floral-motif.svg')]"></div>
               <div className="relative z-10">
                  <FaMapMarkerAlt className="text-3xl text-brand-gold mb-4" />
                  <p className="text-brand-gold text-[0.65rem] uppercase tracking-[0.22em] font-semibold mb-2">Visit Our Studio</p>
@@ -163,10 +164,10 @@ export default function Contact() {
       <section className="container mx-auto px-5 pb-16 sm:px-6 sm:pb-20 lg:px-12">
          <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: '🤍', title: 'Quality Craftsmanship', desc: 'Every stitch is made with care and precision.' },
-              { icon: '💎', title: 'Custom Designs', desc: 'Your ideas, our creativity — made just for you.' },
-              { icon: '🛡️', title: 'Trusted Service', desc: 'Your satisfaction is our priority.' },
-              { icon: '🌿', title: 'Timely Support', desc: 'We\'re always here to assist you.' }
+              { icon: <PiNeedleLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Quality Craftsmanship', desc: 'Every stitch is made with care and precision.' },
+              { icon: <PiScissorsLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Custom Designs', desc: 'Your ideas, our creativity — made just for you.' },
+              { icon: <PiSealCheckLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Trusted Service', desc: 'Your satisfaction is our priority.' },
+              { icon: <PiHeadsetLight className="h-8 w-8 text-[#a27a44]" aria-hidden="true" />, title: 'Timely Support', desc: 'We\'re always here to assist you.' }
             ].map((feature, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: i * 0.07, ease: 'easeOut' }} whileHover={{ y: -5 }} className="group flex h-full min-h-[230px] flex-col items-center rounded-2xl border border-[#c39b62]/35 bg-[#fbf8f1] px-5 py-7 shadow-[0_5px_18px_rgba(9,32,29,0.05)] transition-all duration-300 hover:border-[#c39b62]/65 hover:shadow-[0_12px_26px_rgba(9,32,29,0.10)] sm:min-h-[220px] sm:px-6 sm:py-8">
                  <div className="mb-5 flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full border border-[#c39b62]/45 bg-[#f3eee3] text-[27px] shadow-[inset_0_0_0_4px_rgba(195,155,98,0.08)] transition-transform duration-300 group-hover:scale-105">
