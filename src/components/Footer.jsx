@@ -4,6 +4,11 @@ import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer className="bg-brand-dark py-12 relative overflow-hidden">
+      <svg className="footer-filter-defs" aria-hidden="true" focusable="false">
+        <filter id="footer-logo-background-key" colorInterpolationFilters="sRGB">
+          <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 -0.4" />
+        </filter>
+      </svg>
       {/* Subtle floral background placeholder */}
       <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/floral-motif.png')]"></div>
       
@@ -13,11 +18,7 @@ export default function Footer() {
           
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group mb-6 md:mb-0">
-            <div className="relative w-8 h-8 flex items-center justify-center text-brand-gold font-serif text-2xl italic font-bold">
-              A
-              <div className="absolute top-0 right-0 w-2 h-2 border border-brand-gold rounded-full opacity-50"></div>
-              <div className="absolute -bottom-1 -left-1 w-full h-px bg-brand-gold/50 rotate-45"></div>
-            </div>
+            <img src="/arfi-monogram-logo.png" alt="ARFI Needle Art monogram" className="footer-logo-mark" />
             <div className="flex flex-col">
               <span className="text-lg font-serif text-brand-gold tracking-[0.2em] uppercase leading-none">ARFI</span>
               <span className="text-[0.5rem] text-brand-gold tracking-[0.3em] uppercase mt-1">Needle Art</span>

@@ -42,7 +42,7 @@
 /* Reference inspired, compact two tier masthead and full height mobile hero. */
 .home-header { background: #09201d; }
 .home-banner {
-  height: clamp(105px, 16vw, 200px);
+  height: clamp(82px, 12vw, 150px);
   position: relative;
   display: grid;
   place-items: center;
@@ -54,28 +54,28 @@
 }
 .home-banner-brand {
   display: flex;
-  width: min(42vw, 480px);
-  min-width: 250px;
+  width: max-content;
+  max-width: calc(100% - 24px);
   align-items: center;
   justify-content: center;
-  gap: clamp(8px, 1.2vw, 15px);
-  color: #d7b879;
+  gap: clamp(8px, 1.2vw, 16px);
   text-decoration: none;
-  text-shadow: 0 2px 10px rgb(0 0 0 / 45%);
 }
-.home-banner-mark { display: block; width: clamp(88px, 11vw, 138px); height: auto; flex: 0 0 auto; color: #c9a15e; }
-.home-banner-wordmark { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1rem, 1.85vw, 1.55rem); font-weight: 600; letter-spacing: 0.075em; white-space: nowrap; }
-.home-banner-heart { margin-right: 0.22em; font-size: 1.06em; font-weight: 400; }
-.home-mobile-nav { height: 40px; }
+.home-banner-medallion { display: block; width: clamp(80px, 10vw, 126px); height: auto; aspect-ratio: 1; flex: 0 0 auto; object-fit: cover; border-radius: 50%; box-shadow: 0 3px 18px rgb(0 0 0 / 26%); }
+.home-banner-wordmark { color: #e1c17d; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(0.88rem, 2vw, 1.45rem); font-weight: 600; letter-spacing: clamp(0.03em, 0.15vw, 0.09em); line-height: 1; white-space: nowrap; text-shadow: 0 2px 8px rgb(0 0 0 / 45%); }
+.home-banner-heart { margin-right: 0.22em; font-size: 1.08em; font-weight: 400; }
+.footer-filter-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.footer-logo-mark { display: block; width: 72px; height: 50px; flex: 0 0 auto; object-fit: cover; object-position: center 44%; filter: url(#footer-logo-background-key); }
+.home-mobile-nav { height: 42px; }
 .home-mobile-nav > div { height: 100%; align-items: stretch; }
 .home-mobile-nav a { display: flex; align-items: center; justify-content: center; padding: 0 8px; font-size: 0.74rem; line-height: 1; letter-spacing: 0.07em; }
-.home-hero { padding-top: calc(clamp(105px, 16vw, 200px) + 40px); scroll-margin-top: calc(clamp(105px, 16vw, 200px) + 40px); }
+.home-hero { padding-top: calc(clamp(82px, 12vw, 150px) + 42px); scroll-margin-top: calc(clamp(82px, 12vw, 150px) + 42px); }
 @media (max-width: 767px) {
-  .home-banner { height: clamp(94px, 22vw, 142px); }
-  .home-banner-brand { width: min(82%, 460px); min-width: 0; gap: 5px; }
-  .home-banner-mark { width: clamp(68px, 16vw, 96px); }
-  .home-banner-wordmark { font-size: clamp(0.74rem, 3vw, 1rem); letter-spacing: 0.04em; }
-  .home-hero { min-height: calc(100svh - (clamp(94px, 22vw, 142px) + 40px)); padding-top: calc(clamp(94px, 22vw, 142px) + 40px); }
+  .home-banner { height: clamp(62px, 15vw, 92px); }
+  .home-banner-brand { max-width: calc(100% - 20px); gap: 7px; }
+  .home-banner-medallion { width: clamp(58px, 15vw, 78px); }
+  .home-banner-wordmark { font-size: clamp(0.7rem, 3vw, 0.95rem); letter-spacing: 0.025em; }
+  .home-hero { min-height: calc(100svh - (clamp(62px, 15vw, 92px) + 42px)); padding-top: calc(clamp(62px, 15vw, 92px) + 42px); }
   .home-hero > .container { padding-top: 36px; padding-left: 28px; padding-right: 28px; }
   .home-hero-mobile-image { object-position: center 38%; }
   .home-hero h1 { font-size: clamp(2.5rem, 9vw, 3.25rem); line-height: 1.08; }
